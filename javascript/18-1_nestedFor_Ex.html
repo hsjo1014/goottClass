@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <script>
+      // 직각 삼각형 별
+
+      // document.write("<hr />");
+      // for (let i = 0; i < 1; i++) {
+      //   for (let j = 0; j < 1; j++) {
+      //     document.write("*");
+      //   }
+
+      //   document.write("<br />");
+      // }
+      // for (let i = 0; i < 1; i++) {
+      //   for (let j = 0; j < 2; j++) {
+      //     document.write("*");
+      //   }
+
+      //   document.write("<br />");
+      // }
+      // for (let i = 0; i < 1; i++) {
+      //   for (let j = 0; j < 3; j++) {
+      //     document.write("*");
+      //   }
+
+      //   document.write("<br />");
+      // }
+      // for (let i = 0; i < 1; i++) {
+      //   for (let j = 0; j < 4; j++) {
+      //     document.write("*");
+      //   }
+
+      //   document.write("<br />");
+      // }
+      // for (let i = 0; i < 1; i++) {
+      //   for (let j = 0; j < 5; j++) {
+      //     document.write("*");
+      //   }
+
+      //   document.write("<br />");
+      // }
+
+      document.write("<h2>직각삼각형별</h2>");
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < i + 1; j++) {
+          document.write("*");
+        }
+        document.write("<br />");
+      }
+      document.write("<h2>줄무늬 직각삼각형별</h2>");
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j <= i; j++) {
+          if (i % 2 == 1) {
+            document.write("☆");
+          } else {
+            document.write("★");
+          }
+        }
+
+        document.write("<br />");
+      }
+
+      document.write("<h2>직각삼각형별</h2>");
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < i + 1; j++) {
+          document.write("*");
+        }
+        document.write("<br />");
+      }
+      document.write("<h2>역직각삼각형</h2>");
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5 - i; j++) {
+          document.write("*");
+        }
+        document.write("<br />");
+      }
+      for (let i = 0; i < 5; i++) {
+        for (let j = 5; j > i; j--) {
+          document.write("*");
+        }
+        document.write("<br />");
+      }
+      document.write("<h2>피라미드</h2>");
+      for (let i = 0; i < 5; i++) {
+        for (let j = 5; j > i + 1; j--) {
+          // i = 0, j = 5, 4, 3, 2; -> 4번 반복
+          // i = 1, j = 5, 4, 3     -> 3번 반복
+          document.write("&nbsp;");
+        }
+
+        for (let k = 0; k < 2 * i + 1; k++) {
+          document.write("*");
+        }
+        document.write("<br />");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

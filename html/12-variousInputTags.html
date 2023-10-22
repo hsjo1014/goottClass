@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다양한 input type들</title>
+  </head>
+  <body>
+    <form>
+      <div>
+        아이디 :
+        <input
+          type="text"
+          name="userId"
+          placeholder="이름을 입력하세요"
+          maxlength="4"
+          autocapitalize="off"
+          autofocus
+        />
+      </div>
+      <div>
+        비밀번호 :
+        <input
+          type="password"
+          name="userPassword"
+          placeholder="비밀번호를 입력하세요"
+        />
+      </div>
+      <div>
+        <!-- 대량의 문자열을 입력받는 도구 -->
+        메모 : <textarea name="memo" cols="10" rows="8"></textarea>
+      </div>
+      <div>
+        <fieldset>
+          <legend>좋아하는 음식</legend>
+          <input type="checkbox" name="favoriteFood" value="jjajng" /> 짜장면
+          <input type="checkbox" name="favoriteFood" value="pho" /> 쌀국수
+          <input type="checkbox" name="favoriteFood" value="kimchi" /> 김치찌개
+        </fieldset>
+      </div>
+      <div>
+        <fieldset>
+          <legend>취미</legend>
+          <input type="checkbox" name="hobby" value="soccer" /> 축구
+          <input type="checkbox" name="hobby" value="work" /> 걷기
+          <input type="checkbox" name="hobby" value="sing a song" /> 노래
+        </fieldset>
+      </div>
+      <div>
+        <!-- 단일 선택 가능 (name 속성의 값을 맞춰 주어야 한가지만 선택 가능) -->
+        성별 :
+        <input type="radio" name="gender" value="female" /> 여성
+        <input type="radio" name="gender" value="male" /> 남성
+      </div>
+
+      <div>
+        통신사
+        <select name="comn" size="1">
+          <option value="kt">KT</option>
+          <option value="skt">SKT</option>
+          <option value="lg">LG U+</option>
+        </select>
+      </div>
+
+      <div>
+        생년월일
+        <input type="date" name="birth" min="2000-01-01" max="2060-01-01" />
+      </div>
+      <div>
+        이메일
+        <input type="email" /> @
+        <select name="em">
+          <option value="naver">naver.com</option>
+          <option value="daum">daum.net</option>
+        </select>
+      </div>
+      <div>
+        파일 업로드
+        <input type="file" name="upFile" />
+      </div>
+      <div>
+        좋아하는 색상
+        <input type="color" name="userColor" />
+      </div>
+      <div>
+        나이
+        <input type="number" name="age" min="0" max="150" />
+      </div>
+      <div>
+        희망 연봉
+        <input type="range" name="annualSal" min="3000" max="10000" />
+      </div>
+
+      <div>
+        숨겨진 값
+        <input type="hidden" name="hiddenValue" value="10" />
+      </div>
+      <button type="submit">전송</button>
+      <button type="reset">취소</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사용자 정의 객체</title>
+  <script>
+    // 통장 계좌 만들기
+    let account = new Object(); // account 객체 생성. Object = 클래스
+    console.log(account, typeof account)
+    
+    
+    // account객체의 속성 부여
+    account.owner = '홍길동'; // 예금주
+    account.accNum = 94030200027873; // 계좌번호
+    account.balance = 500; // 잔액
+    account.name = '나라사랑체크'; // 금융상품명
+    account.bankName = 'KB국민은행'; // 은행명
+
+    // 속성 부여의 다른 방식 : [] 이용
+    account['no'] = '123456'; // 속성 생성
+    let accNo = 'no';
+    account[accNo] = '987654'; // 수정
+
+
+    
+    console.log(typeof account, account, account.bankName)
+    document.write(`예금주 ${account.owner}님 안녕하세요. <br>`)
+    document.write(`${account.bankName} ${account.name} ${account.accNum}계좌 총 잔액은 ${account.balence} 원 입니다. <br>`)
+
+    account.deposit = deposit; // 함수 호출이 아니라 함수를 account.deposit에 넣는다. 
+    account.deposit(2000000);
+    account.deposit(1000000);
+    account.checkBalance = inquiry;
+    account.withDraw = withDraw;
+    account.withDraw(1805000);
+    account.withDraw(14150);
+    // account.withDraw(3000000); // 잔액부족
+    
+    // 예금하기, 인출하기, 잔액조회하기( 동사형태 ) -> 기능(메서드)를 부여할 수 있다.
+    function deposit(money){
+      // 예금
+      this.balance += money;
+    }
+
+    function inquiry(){
+      // 잔액 조회
+      return this.balance;
+    }
+
+    function withDraw(money) {
+      //인출
+      if(this.balance >= money) this.balance -= money;
+      else alert('잔액부족')
+    }
+    document.write('<hr>')
+
+    // 2번째 계좌 만들기
+    let account2 = new Object();
+    account2.owner = '이순신'; // 예금주
+    account2.accNum = 3333065247149; // 계좌번호
+    account2.balance = 59500; // 잔액
+    account2.name = '카카오일반예금체크'; // 금융상품명
+    account2.bankName = '카카오뱅크'; // 은행명
+
+    console.log(account2)
+    account2.checkBalance = inquiry;
+    account2.withDraw = withDraw;
+    account2.withDraw(500)
+    document.write(`예금주 ${account2.owner}<br>`)
+    document.write(`계좌번호 ${account2.accNum}<br>`)
+    document.write(`잔액 ${account2.balance}<br>`)
+</script>
+</head>
+<body>
+  
+</body>
+</html>

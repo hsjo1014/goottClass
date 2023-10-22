@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 20px;
+        height: 20px;
+      }
+      .va-b img {
+        vertical-align: baseline; /* 기본값 */
+      }
+      .va-m img {
+        vertical-align: middle;
+      }
+      .va-bo img {
+        vertical-align: bottom;
+      }
+      .va-t img {
+        vertical-align: top;
+      }
+      p .bt {
+        background-color: blue;
+      }
+      p .ba {
+        background-color: aqua;
+        color: #fff;
+        font-size: 0.3em;
+        vertical-align: top;
+        padding: 0.2em 0.8em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>요소의 세로 정렬</h1>
+    <p class="va-b">
+      <span>vertical-align</span>
+      <img src="image/img.jpg" />
+    </p>
+    <p class="va-m">
+      <span>vertical-align</span>
+      <img src="image/img.jpg" />
+    </p>
+    <p class="va-bo">
+      <span>vertical-align</span>
+      <img src="image/img.jpg" />
+    </p>
+    <p class="va-t">
+      <span>vertical-align</span>
+      <img src="image/img.jpg" />
+    </p>
+    <p class="va">
+      <span class="bt">vertical-align</span>
+      <span class="ba">TOP</span>
+    </p>
+  </body>
+</html>

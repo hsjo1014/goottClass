@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 체질량지수 = 몸무게(kg) / 키(m)^2
+      // 1)변수 선언 & 랜덤한 수를 구한다.
+
+      let Name = window.prompt("이름을 입력하세요");
+      let cm = Number(window.prompt("키를 입력하세요."));
+      let kg = Number(window.prompt("몸무게를 입력하세요."));
+
+      console.log(Name, kg, cm);
+
+      let BMI = (kg / (cm * cm)) * 10000;
+      const BMI1 = Math.round(BMI * 100) / 100;
+      document.write(`이름 : ${Name}, 키 : ${cm}cm, 몸무게 : ${kg}kg`);
+
+      // 2)처리
+      let garde = "";
+
+      if (BMI >= 0 && BMI <= 18.5) {
+        grade = "저체중";
+      } else if (BMI > 18.5 && BMI <= 23) {
+        grade = "정상";
+      } else if (BMI > 23 && BMI <= 25) {
+        grade = "과체중";
+      } else {
+        grade = "비만";
+      }
+
+      // 3)출력
+      console.log(BMI1, grade);
+
+      document.write(`<h1 class="title">체질량지수</h1>`);
+      let output = ` <table class="resultBmi">  <tr>
+        <td>이름</td>
+        <td>키</td>
+        <td>몸무게</td>
+        <td>BMI</td>
+        <td>비만도 결과</td>
+        </tr> <tr>
+          <td>${Name}</td>
+          <td>${cm}</td>
+          <td>${kg}</td>
+          <td>${BMI1}</td>
+          <td>${grade}</td>
+          </tr></table>`;
+      document.write(output);
+    </script>
+    <style>
+      .resultBmi,
+      tr,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        height: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./image/BMI.jpg" alt="" />
+  </body>
+</html>

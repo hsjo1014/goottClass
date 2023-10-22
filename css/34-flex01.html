@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 700px;
+        background-color: darkgrey;
+        display: flex;
+        margin-bottom: 30px;
+      }
+      .box {
+        width: 80px;
+        background-color: darkcyan;
+        margin: 5px;
+        padding: 5px 45px;
+        text-align: center;
+      }
+      #C1 {
+        /* 왼쪽에서 오른쪽으로 */
+        flex-direction: row;
+      }
+
+      #C2 {
+        /* 위에서 아래로 */
+        flex-direction: column;
+      }
+      #C3 {
+        /* 오른쪽에서 왼쪽으로 */
+        flex-direction: row-reverse;
+      }
+      #C4 {
+        /* 아래에서 위로 */
+        flex-direction: column-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="C1">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <div class="container" id="C2">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <div class="container" id="C3">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <div class="container" id="C4">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 만들기</title>
+    <style>
+      .name {
+        text-align: center;
+      }
+      input {
+        border: 1px solid rgb(124, 122, 117);
+      }
+      div {
+        font-size: 14px;
+      }
+      p {
+        font-size: 5px;
+      }
+      hr {
+        color: rgb(124, 122, 117);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="name">JOIN</h1>
+    <h3>기본정보</h3>
+    <hr />
+    <div>
+      <div>아이디</div>
+      <input
+        type="text;"
+        name="userId"
+        placeholder="영문 대소문자/숫자 4자~16자"
+        maxlength="20"
+        minlength="4"
+      />
+      <p>영문 대소문자/숫자 4자~16자</p>
+    </div>
+    <hr />
+    <div>
+      <div>비밀번호</div>
+      <input
+        type="password"
+        name="userPassword"
+        placeholder="영문 대소문자/숫자 4자~16자"
+        maxlength="20"
+        minlength="4"
+      />
+      <p>영문 대소문자/숫자 4자~16자</p>
+    </div>
+    <hr />
+    <div>
+      <div>비밀번호 확인</div>
+      <input type="password" name="userPassword" maxlength="20" minlength="4" />
+    </div>
+    <hr />
+    <div>
+      <div>이름</div>
+      <input type="text" name="userName" />
+    </div>
+    <hr />
+    <div>주소</div>
+    <input type="text" name="userAddress" /> <button>우편번호</button>
+    <br />
+    <input type="text" name="userAddress" /> 기본주소
+    <br />
+    <input type="text" name="userAddress" /> 나머지주소
+    <hr />
+    <div>
+      <div>일반전화</div>
+      <select name="teleNumber" size="1">
+        <option value="02">02</option>
+        <option value="02">031</option>
+        <option value="02">032</option>
+        <option value="02">033</option>
+        <option value="02">041</option>
+      </select>
+      -
+      <input type="text" name="PN" />
+      -
+      <input type="text" name="PN" />
+    </div>
+    <hr />
+    <div>
+      <div>휴대전화</div>
+      <select name="pNumber" size="1">
+        <option value="02">010</option>
+        <option value="02">011</option>
+        <option value="02">016</option>
+      </select>
+      -
+      <input type="text" name="PN" />
+      -
+      <input type="text" name="PN" />
+    </div>
+    <hr />
+    <div>
+      <div>이메일</div>
+      <input type="email" />
+    </div>
+    <hr />
+    <h3>추가정보</h3>
+    <hr />
+    <div>
+      <div>성별</div>
+      <input type="radio" name="gender" value="female" /> 여성
+      <input type="radio" name="gender" value="male" /> 남성
+    </div>
+    <hr />
+    <div>
+      <div>생년월일</div>
+      <input type="text" name="연도" />년 <input type="text" name="연도" />월
+      <input type="text" name="연도" />일
+      <input type="radio" name="ye" value="y" /> 양력
+      <input type="radio" name="ye" value="e" /> 음력
+    </div>
+    <hr />
+    <h3>전체 동의</h3>
+    <hr />
+    <div>
+      <input type="checkbox" name="agree" value="동의" />이용약관 및
+      개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다.
+      <h4>[필수]이용약관 동의</h4>
+      <iframe src="afreemenat_ex.txt" width="1000" height="200"></iframe>
+    </div>
+    <div>
+      이용약관에 동의하십니까?<input
+        type="checkbox"
+        name="agree1"
+        value="동의1"
+      />
+    </div>
+
+    <div>
+      <h4>[필수]개인정보 수집 및 이용 동의</h4>
+      <iframe src="afreemenat_ex2.txt" width="1000" height="200"></iframe>
+    </div>
+    <div>
+      개인정보 수집 및 이용에 동의하십니까?<input
+        type="checkbox"
+        name="agree2"
+        value="동의2"
+      />
+    </div>
+    <div>
+      <h4>[선택]개인정보 수집 및 이용 동의</h4>
+      <iframe src="afreemenat_ex3.txt" width="1000" height="200"></iframe>
+    </div>
+    <div>
+      SMS 수신을 동의하십니까?<input
+        type="checkbox"
+        name="agree3"
+        value="동의3"
+      />
+    </div>
+    <div>
+      <button type="submit">회원가입</button>
+    </div>
+  </body>
+</html>

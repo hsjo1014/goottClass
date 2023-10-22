@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/table.css" />
+    <title>성정표</title>
+    <style>
+      .container {
+        width: 100%;
+        overflow-x: auto;
+      }
+      #score-table {
+        width: 960px;
+        border: 3px solid black;
+        border-collapse: collapse;
+      }
+      #socre-table tr,
+      td {
+        border: 3px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+    * caption : 성적표
+    * 학번, 이름, 국어, 영어, 수학, 물리, 화학, 지리, 국사, 미술, 음악, 체육, 총점, 평균, 등수
+    *20230918 조현성  80 82 79 52 43 76 85 20 14 13 ....
+   -->
+
+    <div class="container">
+      <caption>
+        성적표
+      </caption>
+      <table id="score-table"></table>
+      <tr>
+        <td>학번</td>
+        <td>이름</td>
+        <td>국어</td>
+        <td>영어</td>
+        <td>물리</td>
+        <td>화학</td>
+        <td>지리</td>
+        <td>미술</td>
+        <td>음악</td>
+        <td>체육</td>
+      </tr>
+      <tr>
+        <td>20230918</td>
+        <td>조현성</td>
+        <td>80</td>
+        <td>88</td>
+        <td>90</td>
+        <td>70</td>
+        <td>78</td>
+        <td>76</td>
+        <td>71</td>
+        <td>67</td>
+      </tr>
+    </div>
+  </body>
+</html>

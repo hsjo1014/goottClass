@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script>
+      window.onload = function () {
+        let price = 23000;
+        let sideMenu = document.getElementsByClassName("checkbx");
+        // let sideMenu = document.querySelectorAll(".checkbx");
+        console.log(sideMenu);
+        let total = document.getElementById("total");
+        total.value = price + "원";
+
+        // 체크박스를 클릭할대 실행할 문장 처리
+        for (let i = 0; i < sideMenu.length; i++) {
+          sideMenu[i].onclick = function () {
+            // console.log(this);
+            console.log(this.checked);
+            // 체크가 되면
+            if (this.checked == true) {
+              console.log(this.value);
+              price += parseInt(this.value);
+              console.log(price);
+            } else {
+              price -= parseInt(this.value);
+              console.log(price);
+            }
+            total.value = price + "원";
+          };
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <img src="/javascript/image/ck.jpg" alt="" />
+    </div>
+    <h1>반반콤보</h1>
+    <p>마늘 간장이 어우러진 치킨</p>
+    <form action="">
+      <fieldset>
+        <legend>기본버거</legend>
+        <p>23000원</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>추가 메뉴</legend>
+        <label for="hck">
+          <input
+            type="checkbox"
+            value="1400"
+            id="hck"
+            class="checkbx"
+          />후라이드치킨
+        </label>
+        <label for="gck">
+          <input
+            type="checkbox"
+            value="1000"
+            id="gck"
+            class="checkbx"
+          />간장치킨
+        </label>
+        <label for="yck">
+          <input
+            type="checkbox"
+            value="2000"
+            id="yck"
+            class="checkbx"
+          />양념치킨
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>합계</legend>
+        <div id="totalPrice">
+          <input type="button" id="total" class="price" /><span>담기</span>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>

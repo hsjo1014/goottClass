@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>공지사항 (팝업창)</title>
+    <script>
+      function closeNotice() {
+        // 유저가 체크박스에 체크를 했다면 => 쿠키를 남기고 닫아야 함.
+        // 유저가 체크박스에 체크를 하지 않았다면 => 그냥 닫아야 함.
+        if (document.getElementsByTagName("input")[0].checked == true) {
+          // 쿠키 남기자
+          let myCookie = "";
+          let now = new Date();
+          now.setDate(now.getDate() + 1); // 1일 후에 만료되는 쿠기 만료일
+
+          myCookie = "notice=Y;expires=" + now.toUTCString();
+          document.cookie = myCookie;
+        }
+
+        window.close();
+      }
+    </script>
+    <style>
+      .notice {
+        padding: 20px;
+        position: relative;
+      }
+      .checkbx {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        top: 200px;
+      }
+      .close {
+        position: absolute;
+        bottom: 20px;
+        top: 200px;
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="notice">
+      <h1>공지사항</h1>
+      <div>점심 맛있게 먹읍시다..</div>
+      <div class="checkbx">
+        <input type="checkbox" />하루 동안 이 창 열지 않기
+      </div>
+      <div class="close">
+        <input type="button" value="닫기" onclick="closeNotice();" />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div ~ p {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>형제(Sibling)선택자</h1>
+    <p>형제 선택자로 스타일을 꾸미면 어떻게 될까요?</p>
+    <div>
+      <p>div 내부 p태그1</p>
+      <p>div 내부 p태그2</p>
+      <p>div 내부 p태그3</p>
+      <h3>
+        <p>div 내부의 내부의 p태그</p>
+      </h3>
+    </div>
+    <p>div외부의 p태그1</p>
+    <p>div외부의 p태그2</p>
+    <h4>
+      div외부의 h4태그
+      <p>이것은 동위(=)가 p가 아니다.</p>
+    </h4>
+    <p>div외부의 p태그</p>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>속성 선택자</title>
+    <style>
+      a[target="_blank"] {
+        /* a태그 안에 target속성에 스타일 준다. */
+        font-weight: bold;
+        font-size: 50px;
+        color: violet;
+      }
+
+      a[class] {
+        color: red;
+        box-shadow: 5px 5px 5px gray;
+      }
+      a[class~="flat"] {
+        /* a태그의 class속성 값 중에서 flat단어가 포함되어 있는 요소 */
+        font-size: 50px;
+      }
+      a[class^="bu"] {
+        /* a태그의 calss속성 값 중에서 bu로 시작하는 요소 */
+        color: blue;
+        background-color: aqua;
+      }
+      a[class$="ry"] {
+        /* 속성 값으로 끝나는 요소 */
+        text-decoration: none;
+      }
+      a[class|="cl"] {
+        /* 지정한 속성값이 포함된 요소 : 속성 값이 "cl" 이거나 "cl- 시작하는 요소*/
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>WEB의 프론트 기술</h1>
+    <ul class="firUl">
+      <li>
+        <a
+          href="https://cssdeck.com/blog/scripts/eric-meyer-reset-css/"
+          class="flat"
+        >
+          HTML</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%8C%80%EB%AC%B8"
+          target="_blank"
+          ><img src="image/mail.png"
+        /></a>
+      </li>
+      <li>
+        <a
+          href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%ED%8E%B8%EC%A7%91%EC%A7%80%EC%B9%A8/%EC%9D%BC%EB%B0%98%20%EB%AC%B8%EC%84%9C"
+          class="bu"
+          >JavaScrip</a
+        >
+      </li>
+      <li>
+        <a href="https://map.naver.com/p?c=15.00,0,0,0,dh" class="ry">JQuery</a>
+      </li>
+      <li><a href="https://map.kakao.com/" class="bu">Ajax</a></li>
+      <li><a href="#" class="cl-class">ClName</a></li>
+    </ul>
+    <ul>
+      <li>
+        <input type="radio" id="halfSub" name="subway" />
+        <label for="halfSub">서브웨이 half</label>
+      </li>
+      <li>
+        <input type="radio" id="footLongSub" name="subway" checked />
+        <label for="footLongSub">서브웨이 foot Long</label>
+      </li>
+    </ul>
+  </body>
+</html>

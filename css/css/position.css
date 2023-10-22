@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#contents {
+  background: url(../image/img.jpg) no-repeat;
+  width: 700px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+h1 {
+  color: #fff;
+  position: absolute;
+  left: 30px;
+  top: 70px;
+}
+
+h2 {
+  color: blue;
+  position: absolute;
+  top: 110px;
+  left: 30px;
+}

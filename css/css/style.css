@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap");
+@import "variable.css";
+
+.main-title {
+  background-color: var(--blue);
+  border: var(--main-border);
+}

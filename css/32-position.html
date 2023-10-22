@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 500px;
+        height: 150px;
+        background-color: brown;
+      }
+      #static {
+        position: static;
+      }
+      #relative-1 {
+        position: relative;
+        opacity: 0.5;
+      }
+      #relative-2 {
+        position: relative;
+        left: 100px; /* 왼쪽에서 100px 떨어지도록 위치잡기 */
+        top: -50px; /* (+) 흐름 방향대로 : 아래방향, (-) 반대방향 : 위쪽 방향 */
+        opacity: 0.8;
+      }
+      #fixed {
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        /* right: 30px; */
+        bottom: 30px;
+        /* left: 30px; */
+        /* top: 30px; */
+        background-color: #000;
+      }
+      .ah {
+        list-style: none;
+        position: relative;
+        right: 20px;
+        bottom: 60px;
+      }
+      .ah li a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="static">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+      praesentium aliquid voluptatum fugit, facere incidunt aperiam animi est
+      sit quas? Deleniti nostrum necessitatibus magnam amet impedit, cumque
+      doloremque voluptatem inventore.
+    </p>
+    <p id="relative-1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+      praesentium aliquid voluptatum fugit, facere incidunt aperiam animi est
+      sit quas? Deleniti nostrum necessitatibus magnam amet impedit, cumque
+      doloremque voluptatem inventore.
+    </p>
+    <p id="relative-2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+      praesentium aliquid voluptatum fugit, facere incidunt aperiam animi est
+      sit quas? Deleniti nostrum necessitatibus magnam amet impedit, cumque
+      doloremque voluptatem inventore.
+    </p>
+    <p id="relative-3">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+      praesentium aliquid voluptatum fugit, facere incidunt aperiam animi est
+      sit quas? Deleniti nostrum necessitatibus magnam amet impedit, cumque
+      doloremque voluptatem inventore.
+    </p>
+    <p id="relative-4">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+      praesentium aliquid voluptatum fugit, facere incidunt aperiam animi est
+      sit quas? Deleniti nostrum necessitatibus magnam amet impedit, cumque
+      doloremque voluptatem inventore.
+    </p>
+    <ul class="ah">
+      <li>
+        <a href="#static"><img src="../css/image/push.png" width="20px" /></a>
+      </li>
+    </ul>
+    <!-- <p id="fixed"></p> -->
+  </body>
+</html>

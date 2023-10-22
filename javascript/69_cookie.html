@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>쿠키의 일반적으로 운용</title>
+    <script>
+      function saveCookie() {
+        // 쿠키이름=값;expires=쿠키만료일;(domain=도메인명;path=쿠키저장경로)
+        let myCookie = "";
+        let now = new Date();
+        // now.setSeconds(now.getSeconds() + 5); // 5초 후 만료되는 쿠키 만료일
+        now.setDate(now.getDate() + 1); // 1일 후에 만료되는 쿠기 만료일
+        console.log(now.toUTCString());
+
+        myCookie = "myCook=ksy;expires=" + now.toUTCString();
+        console.log(myCookie);
+        document.cookie = myCookie; // 쿠키 저장
+
+        // myCook2생성
+        let now2 = new Date();
+        now2.setMinutes(now2.getMinutes() + 100);
+        let myCookie2 = "myCook2=cookie2;expires=" + now2.toUTCString();
+        document.cookie = myCookie2;
+      }
+
+      function readCookie() {
+        let cook = document.cookie;
+        console.log(typeof cook);
+        console.log(cook); // myCook=ksy; myCook2=cookie2
+        console.log(cook.split(";")); // ;콜론으로 분리하고 배열로 반환
+        let cookArr = cook.split(";"); // 각 요소에 쿠키가 하나씩 들어감
+        // console.log(cookArr[0].split("=")[1]);
+
+        // myCook쿠키의 값을 alert창으로 띄우기
+        let searchName = "myCook3";
+        let isFind = false;
+
+        for (let i = 0; i < cookArr.length; i++) {
+          let cookName = cookArr[i].split("=")[0];
+          console.log(cookName);
+          if (cookName.trim() == searchName) {
+            // 쿠키를 찾았다! searchName쿠키의 값을 띄워줘야 함.
+            isFind = true;
+            alert("찾았다: " + cookArr[i].split("=")[1]);
+          }
+        }
+
+        if (!isFind) {
+          alert("그런 쿠키 없습니다...쿠키는 먹고싶다...");
+        }
+
+        // 없을 경우 alert창으로 "그런 쿠키 없습니다"띄우기
+      }
+
+      function delCookie() {
+        // myCook 쿠키 삭제
+        // 삭제할 쿠키의 expires값을 현재 날짜,시간으로 재설정하여 다시 저장한다. (overwrite)
+        let delName = "myCook";
+        let now = new Date();
+        let cookie = delName + "=;expires=" + now.toUTCString();
+        document.cookie = cookie;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="쿠키저장" onclick="saveCookie();" />
+    <input type="button" value="쿠키읽기" onclick="readCookie();" />
+    <input type="button" value="쿠키삭제" onclick="delCookie();" />
+  </body>
+</html>

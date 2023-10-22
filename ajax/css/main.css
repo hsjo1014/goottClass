@@ -1,0 +1,9 @@
+image {
+  width: 50px;
+}
+.selectUnits [type="radio"] {
+  opacity: 1;
+}
+.weaterInfo__weather {
+  font-size: 30px;
+}

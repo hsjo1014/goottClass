@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        background-color: yellow;
+        display: none;
+      }
+      div:hover ~ p {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div>여기에 마우스를 올리면 p요소가 나타납니다!</div>
+    <p>Boom!</p>
+  </body>
+</html>

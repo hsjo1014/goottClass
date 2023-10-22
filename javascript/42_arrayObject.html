@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열객체</title>
+  <script>
+    // 배열 생성
+    let array1 = new Array();
+    console.log(array1)
+    let array2 = new Array(5);
+    console.log(array2)
+    let array3 = new Array(5);
+    console.log(array3)
+    let array4 = [];
+    console.log(array4)
+    let arr = ['Hello','World'];
+    let str = 'HelloWorld';
+
+    console.log(Array.isArray(arr));
+    console.log(Array.isArray(str));
+
+    // push, pop, unshift, shift
+    arr.push('!'); // 배열 끝에 요소 삽입
+    console.log(arr);
+    // str.push('!'); // 배열 끝에 요소 삽입
+    // console.log(srr); // 유사배열이므로 error출력됨.
+
+    arr.pop(); // 배열 끝에 있는 요소 삭제
+    console.log(arr);
+
+    arr.unshift('chat 1. ') // 배열의 0번째 요소 삽입
+    console.log(arr);
+
+    arr.shift() // 배열의 0번째 요소 삭제
+    console.log(arr);
+
+    // splice() 
+    arr.splice(1, 0, '❤'); // 
+    console.log(arr);
+    arr.splice(arr.length, 0, '❤'); // 
+    console.log(arr);
+    
+    // splice() 인수가 1개인 경우 : 지정된 인덱스 요소부터 끝까지 삭제
+    arr.splice(3)
+    console.log(arr);
+
+    // splice() 인수가 2개인 경우 : 삭제할 인덱스 요소부터 두번째인수값만큼 삭제
+    arr.splice(1,1)
+    console.log(arr);
+    
+    // splice() 인수가 3개인 경우 : 삭제할 인덱스 요소부터 두번째인수값만큼 삭제하고 그 인덱스에 새로 추가할 요소
+    arr.splice(1,1, '😊')
+    console.log(arr);
+
+    // include() : 배열의 항목에 특정 값이 포함되어있는지 확인 return true | false;
+    console.log(arr.includes('hello')) // false : 대소문자구분함
+    console.log(arr.includes('Hello')) // true
+
+    // find() : 배열에서 제공된 테스트함수를 만족하는 첫번째 요소를 반환
+    let arr2 = ['hello','world','my','friend', '.'];
+    let find = arr2.find(value => value.length < 3);
+    let find2 = arr2.find(value => value.length > 10);
+    console.log(find); // my
+    console.log(find2); // 찾는게 없다면 undefined 반환
+    
+    // filter() : 주어진 배열에서 특정조건이 맞는 요소만 반환
+    let words = ['Debugging', 'is', 'removing', 'bugs', 'and', 'Programming', 'is', 'putting', 'them', 'in']
+    let result = words.filter((word) => {if(word.length > 6) return word});
+    console.log(result); // ['Debugging', 'removing', 'Programming', 'putting']
+
+    // sort()
+    let arr3 = [10, 3, 52, 1, 19, 8];
+    console.log(arr3.sort()); // [1, 10, 19, 3, 52, 8] : 숫자에는 적용할 수 없음. 
+    console.log(arr3.sort(compare)) // [1, 3, 8, 10, 19, 52]
+    console.log(arr3.sort(compareAsc)) // [1, 3, 8, 10, 19, 52]
+
+    function compare(a, b) {
+      if (a < b) return -1; // a를 b보다 낮은 인덱스로 정렬
+      if (a > b) return 1; // b를 a보다 낮은 인덱스로 정렬
+      return 0;
+    }
+    function compareAsc(a, b) {
+      if (a < b) return 1; // a를 b보다 높은 인덱스로 정렬
+      if (a > b) return -1; // b를 a보다 높은 인덱스로 정렬
+      return 0;
+    }
+
+    // map() : 사상함수, 새로운 배열을 반환
+    let newArr = arr3.map((value) => {value + 5});
+    console.log(arr3.map(value => value+5)) // [57, 24, 15, 13, 8, 6]
+    
+    // forEach() : void반환
+    console.log(arr3)
+    console.log(arr3.forEach((value) => {value + 5})) // undefined
+    
+    </script>
+</head>
+<body>
+  
+</body>
+</html>

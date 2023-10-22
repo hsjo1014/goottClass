@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div.overflow {
+        width: 200px;
+        height: 200px;
+        background-color: cadetblue;
+        overflow: auto;
+      }
+      div.ellipse {
+        width: 200px;
+        height: 200px;
+        background-color: cornflowerblue;
+        overflow: hidden; /* 100픽셀 넘는 내용을 보이지 않게 처리 */
+        text-overflow: ellipsis;
+        white-space: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overflow">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa expedita
+      fuga impedit repudiandae sit reprehenderit repellat excepturi
+      voluptatibus, in vero officia blanditiis debitis, assumenda itaque eius
+      officiis a est quisquam. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Repellat incidunt doloribus nulla magni quis omnis nisi
+      neque, saepe, dolore dolorem sapiente blanditiis praesentium, quasi libero
+      laboriosam enim debitis minima? Eligendi. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Reiciendis nemo magnam labore? Facere
+      blanditiis hic eos, est quibusdam soluta eius saepe iste alias quas,
+      molestiae porro. Voluptas nam aspernatur accusamus!
+    </div>
+    <div class="ellipse">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa expedita
+      fuga impedit repudiandae sit reprehenderit repellat excepturi
+      voluptatibus, in vero officia blanditiis debitis, assumenda itaque eius
+      officiis a est quisquam. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Repellat incidunt doloribus nulla magni quis omnis nisi
+      neque, saepe, dolore dolorem sapiente blanditiis praesentium, quasi libero
+      laboriosam enim debitis minima? Eligendi. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Reiciendis nemo magnam labore? Facere
+      blanditiis hic eos, est quibusdam soluta eius saepe iste alias quas,
+      molestiae porro. Voluptas nam aspernatur accusamus!
+    </div>
+  </body>
+</html>

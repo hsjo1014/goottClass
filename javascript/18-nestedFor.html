@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>중첩 for문</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+
+      table {
+        float: left;
+        margin: 50px;
+      }
+
+      table,
+      th {
+        border: 2px solid #0000;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 2px solid #000;
+      }
+    </style>
+    <script>
+      for (let i = 0; i < 4; i++) {
+        // console.log(i);
+
+        for (let j = 0; j < i + 2; j++) {
+          console.log(i, j);
+        }
+      }
+
+      // ☆★★☆★★☆★★
+      for (let i = 0; i < 3; i++) {
+        document.write("☆");
+        for (let j = 0; j < 2; j++) document.write("★");
+      }
+
+      document.write("<hr />");
+      // 4행 3열의 테이블
+      let tableOut = "<table border='1'>";
+      for (let i = 0; i < 4; i++) {
+        tableOut += "<tr>";
+        for (let j = 0; j < 3; j++) {
+          tableOut += `<td>${3 * i + (j + 1)}</td>`;
+        }
+        tableOut += "</tr>";
+      }
+      tableOut += "</table>";
+      document.write(tableOut);
+      document.write("<hr/>");
+
+      // 3단 구구단을 테이블로 출력하자.
+      let dan = "<table  border='1'>";
+      for (let j = 1; j < 10; j++) {
+        dan += "<tr>";
+        for (let i = 1; i < 10; i++) {
+          dan += `<td>${j * i}</td>`;
+        }
+      }
+      dan += "</table>";
+      document.write(dan);
+
+      document.write("<h1>구구단</h1>");
+      for (let dan = 1; dan < 10; dan++) {
+        document.write("<table>");
+        document.write("<tr><th>" + dan + "단</th></tr>");
+        for (let i = 1; i < 10; i++) {
+          document.write(
+            "<tr><td>" + dan + "*" + i + "=" + dan * i + "</td></tr>"
+          );
+        }
+      }
+      document.write("<hr />");
+      // 직사각형 별 (3 x 4 )
+      for (let i = 0; i < 3; i++) {
+        // i = 0, 1, 2
+        for (let j = 0; j < 4; j++) {
+          document.write("*");
+        }
+        document.write("<br />");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

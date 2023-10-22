@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">hello, jQuery
+첫번째 h2
+두번째 h2
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello, jQuery</title>
+  <script src="js/jquery-3.7.1.js"></script> <!-- 로컬 -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 네트워크-->
+  <script>
+    // window.onload = function() {
+    $(document).ready(function() {
+      // document.getElementsByTagName('h1')[0].style.color = 'pink';
+      $('h1').css('color', 'pink');
+      $('h2').eq(1).css('backgroundColor', 'aqua');
+
+      // justDo()
+      $('div').click(function() {
+        $(this).html(`참 쉽죠`);
+      });
+
+      // disp()
+      $(`.small`).mouseover(function() {
+        $(`.big`).show(300, function () {
+          // alert();
+        }); // slow | fast | Number(msec)
+      });
+
+      // hide()
+      $(`.small`).mouseout(function() {
+        $(`.big`).hide(`fast`);
+      });
+    });
+
+    //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+    function justDo(obj) {
+      obj.innerHTML = `이렇게 바뀝니다.`;
+    }
+
+    //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+    function disp() {
+      document.getElementsByClassName('big')[0].style.display = 'block';
+    }
+    
+    function hide() {
+      document.getElementsByClassName('big')[0].style.display = 'none';
+    }
+  </script>
+  <style>
+    .big {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>hello, jQuery</h1>
+  <h2>첫번째 h2</h2>
+  <h2>두번째 h2</h2>
+  <!-- <div onclick="justDo(this);">jQUery는 자바스크립트 코딩을 좀더 빠르고 편하게 사용할 수 있도록 하는 라이브러리입니다.</div> -->
+  <div>jQUery는 자바스크립트 코딩을 좀더 빠르고 편하게 사용할 수 있도록 하는 라이브러리입니다.</div>
+
+  <!-- <div>
+    <img src="media/image/1_helloJQuery.html/lambo.jpg" width="25%" onmouseover="disp();" onmouseout="hide();">
+  </div>
+
+  <div>
+    <img src="media/image/1_helloJQuery.html/lambo.jpg" class="big" width="50%">
+  </div> -->
+
+  <div>
+    <img src="media/image/1_helloJQuery.html/lambo.jpg" class="small" width="25%">
+  </div>
+
+  <div>
+    <img src="media/image/1_helloJQuery.html/lambo.jpg" class="big" width="50%">
+  </div>
+</body>
+</html>

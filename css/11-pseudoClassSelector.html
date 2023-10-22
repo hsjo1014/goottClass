@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>의사(가상, pseudo) 클래스</title>
+    <style>
+      /* 
+        :link (방문하지 않은 링크에 스타일을 적용)
+        :visited (방문한 링크에 스타일)
+        :hover (특정요소에 마우스 포인터를 올려놓을 때 스타일 적용)
+        :actve (활성화된 요소에 마우스 포인터를 올려놓으면 스타일 적용 -- 클릭하는 순간)
+        :focus (요소에 초점이 맞춰졌을 때) 
+       */
+
+      li:hover {
+        background-color: yellow;
+      }
+
+      a:visited {
+        /* 방문했던 페이지 */
+        color: palegoldenrod;
+      }
+
+      h1::first-letter {
+        font-size: 40px;
+        color: aqua;
+      }
+
+      .firUl li:nth-child(odd) {
+        border: 1px dotted red;
+      }
+
+      input:checked + label {
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>WEB의 프론트 기술</h1>
+    <ul class="firUl">
+      <li>
+        <a href="https://cssdeck.com/blog/scripts/eric-meyer-reset-css/">
+          HTML</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%8C%80%EB%AC%B8"
+          >CSS</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%ED%8E%B8%EC%A7%91%EC%A7%80%EC%B9%A8/%EC%9D%BC%EB%B0%98%20%EB%AC%B8%EC%84%9C"
+          >JavaScrip</a
+        >
+      </li>
+      <li><a href="https://map.naver.com/p?c=15.00,0,0,0,dh">JQuery</a></li>
+      <li><a href="https://map.kakao.com/">Ajax</a></li>
+    </ul>
+    <ul>
+      <li>
+        <input type="radio" id="halfSub" name="subway" />
+        <label for="halfSub">서브웨이 half</label>
+      </li>
+      <li>
+        <input type="radio" id="footLongSub" name="subway" checked />
+        <label for="footLongSub">서브웨이 foot Long</label>
+      </li>
+    </ul>
+  </body>
+</html>

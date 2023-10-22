@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>비동기 통신으로 json 파일 가져오기</title>
+    <script>
+      function txtLoad() {
+        $.ajax({
+          url: "http://nullishh.cafe24.com/jhs/accounts.json",
+          type: "GET",
+          dataType: "json",
+          success: function (data) {
+            console.log(data);
+            parsingJSON(data);
+          },
+          fail: function () {},
+          complete: function () {},
+        });
+      }
+      function parsingJSON(json) {
+        // let accounts = xml.getElementsByTagName("account");
+        // console.log(accounts);
+        // let output =
+        //   "<table border='1'><tr><td>예금주</td><td>계좌번호</td><td>잔액</td><td>통장명</td><td>은행명</td></tr>";
+        // $.each(accounts, function (i, account) {
+        //   output += `<tr><td>${}</td>`;
+        //   output += `<td>${}</td>`;
+        //   output += `<td>${}</td>`;
+        //   output += `<td>${}</td>`;
+        //   output += `<td>${}</td>`;
+        //   output += "</tr>";
+        // });
+        // output += "</table>";
+        // $("#output").html(output);
+        console.log(json[0].owner);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="Ajax!" onclick="txtLoad();" />
+    <div id="output"></div>
+  </body>
+</html>

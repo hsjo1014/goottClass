@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 1~9까지 합을 구하되, 3의 배수를 제외한 합을 구하세요.
+
+      let evenSum = 0;
+      for (let i = 0; i < 10; i++) {
+        if (i % 3 == 0) {
+          continue;
+        }
+        evenSum += i;
+      }
+      document.write(evenSum);
+
+      // 1~100까지의 짝수 합만을 구하세요 (continue 이용)
+      document.write("<hr/>");
+      let Sum = 0;
+      for (let j = 0; j < 101; j++) {
+        if (j % 2 == 1) {
+          continue;
+        }
+        Sum += j;
+      }
+      document.write(Sum);
+
+      // 1부터 누적합을 구하되, 몇까지 더해야 누적합이 1000이 넘어가는지 출력하세요.
+      document.write("<hr/>");
+      let sumN = 0;
+      for (let w = 1; w > 0; w++) {
+        // n = 1, 2, 3, 4, 5, 6, 7 .....
+        sumN += w; // sum = sum + n;
+        console.log("w=" + w, "sumN = " + sumN);
+        console.log(w);
+        document.write(`"w="  ${w}, "sumN = "  ${sumN}  <br/>`);
+        if (sumN > 1000) {
+          break;
+        }
+      }
+      document.write(`sumN = ${sumN}`);
+
+      // while
+      document.write("<hr/>");
+      let accumulate = 0;
+      let i = 0;
+      while (accumulate < 1001) {
+        accumulate += i;
+        document.write(`${i}까지 누적 합은 ${accumulate}값이 됩니다. <br/ >`);
+        i++;
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

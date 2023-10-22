@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style-type: none;
+        background-color: #eee;
+      }
+
+      li {
+        display: inline;
+      }
+      ul li a {
+        padding: 30px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 22px;
+        font-weight: bold;
+        width: 100px;
+        color: black;
+      }
+      li a:hover {
+        background-color: yellow;
+      }
+      #b {
+        display: none;
+      }
+    </style>
+    <script>
+      function sizeUp() {
+        // console.log(document.getElementById("b"));
+        document.getElementById("b").style.display = "block";
+      }
+      function sizeDowm() {
+        document.getElementById("b").style.display = "none";
+      }
+    </script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+      </ul>
+
+      <div class="s">
+        <img
+          src="image/img.jpg"
+          width="100px"
+          onmouseover="sizeUp()"
+          onmouseout="sizeDowm()"
+        />
+      </div>
+      <div id="b">
+        <img src="image/img.jpg" width="500px" />
+      </div>
+    </nav>
+  </body>
+</html>
